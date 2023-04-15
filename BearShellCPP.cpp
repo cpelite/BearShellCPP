@@ -18,7 +18,7 @@ void commlist() {
 }
 
 void clearscreen() {
-    system("cls");
+    system("clear");
 }
 
 int main(int, char**)
@@ -42,6 +42,9 @@ int main(int, char**)
         }
         else if (input == "cls") {
             clearscreen();
+        }
+        else if (input == "exit") {
+            break;
         }
         else
         {

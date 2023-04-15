@@ -15,7 +15,7 @@ void echo() {
 }
 
 void commlist() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a specified file.";
+    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt.";
 }
 
 void clearscreen() {
@@ -37,13 +37,28 @@ void readfile() {
 
 }
 
+void lyrica() {
+    std::fstream FileToRead("lyrica.txt");
+    char ch;
+    while ( FileToRead ) {
+        FileToRead.get(ch);
+        std::cout << ch;
+    }
+    std::cout << std::endl;
+}
+
 int main(int, char**)
 {
     std::string input;
+    std::string username;
+
+    std::cout << "Please enter a username for this session: ";
+    std::cin >> username;
 
     while (true)
     {
-        std::cout << "BearShellCPP - please enter a command to continue." << std::endl;
+        std::cout << "BearShellCPP - v0.0.1" << std::endl;
+        std::cout << "[" <<username << "|bscpp]$ " ;
         std::cin >> input;
         if (input == "info")
         {
@@ -65,9 +80,12 @@ int main(int, char**)
         else if (input == "exit") {
             break;
         }
+        else if (input == "lyrica") {
+            lyrica();
+        }
         else
         {
-            std::cout << "Unrecognized command. Please type help for a list of commands." << input << std::endl;
+            std::cout << "Unrecognized command. Please type help for a list of commands." << std::endl;
         }
     }
 

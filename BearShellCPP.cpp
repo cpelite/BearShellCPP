@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 void info() {
     std::cout << "BearShellCPP v0.0.1";
@@ -14,11 +15,26 @@ void echo() {
 }
 
 void commlist() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list.";
+    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a specified file.";
 }
 
 void clearscreen() {
     system("clear");
+}
+
+void readfile() {
+    std::string mytext;
+    std::string filepath;
+    std::cout << "Please enter the filename:";
+    std::cin >> filepath; 
+    std::fstream FileToRead(filepath);
+    while (getline (FileToRead, mytext)) {
+        std::cout << mytext;
+        //FileToRead.close();
+    }
+    FileToRead.close();
+    std::cout << "\n";
+
 }
 
 int main(int, char**)
@@ -42,6 +58,9 @@ int main(int, char**)
         }
         else if (input == "cls") {
             clearscreen();
+        }
+        else if (input == "rfile") {
+            readfile();
         }
         else if (input == "exit") {
             break;

@@ -16,7 +16,7 @@ void echo() {
 }
 
 void commlist() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt.";
+    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt. \nmkfile - creates a file. \nfilemod - modifies a file.";
 }
 
 void clearscreen() {

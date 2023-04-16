@@ -19,7 +19,7 @@ rfile - reads from a user specified file.
 
 lyrica - reads from lyrica.txt
 
-##About lyrica.txt
+## About lyrica.txt
 lyrica.txt is a textfile which currently serves as a simple to-do-file.
 
 ## Planned additions

@@ -24,7 +24,7 @@ int main(int, char**)
         {
             echo();
         }
-        else if (input == "commlist") {
+        else if (input == "help") {
             commlist();
         }
         else if (input == "cls") {

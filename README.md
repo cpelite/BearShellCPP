@@ -9,15 +9,7 @@ Just compile and execute it. It should work with every system.
 
 ## List of commands
 
-info - displays information about the shell.
-
-echo - echoes user entry back.
-
-commlist - shows the integrated list of commands.
-
-rfile - reads from a user specified file.
-
-lyrica - reads from lyrica.txt
+Type help for a list of commands.
 
 ## About lyrica.txt
 lyrica.txt is a textfile which currently serves as a simple to-do-file.

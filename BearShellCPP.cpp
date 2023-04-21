@@ -13,7 +13,7 @@ int main(int, char**)
 
     while (true)
     {
-        std::cout << "BearShellCPP - v0.0.1" << std::endl;
+        std::cout << "BearShellCPP - v0.0.2" << std::endl;
         std::cout << "[" <<username << "|bscpp]$ " ;
         std::cin >> input;
         if (input == "info")

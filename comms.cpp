@@ -2,9 +2,12 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <filesystem>
+
+namespace fs = std::filesystem;
 
 void info() {
-    std::cout << "BearShellCPP v0.0.1";
+    std::cout << "BearShellCPP v0.0.2 - Ascendere!";
     std::cout << "Copyright B. Fellner / @CPElite (github.com)";
 }
 
@@ -16,7 +19,7 @@ void echo() {
 }
 
 void commlist() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt. \nmkfile - creates a file. \nfilemod - modifies a file.";
+    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt. \nmkfile - creates a file. \nfilemod - modifies a file. \nworkdir - gets the current working directory." << std::endl;
 }
 
 void clearscreen() {
@@ -67,4 +70,9 @@ void filemod() {
     std::getline(std::cin, finput);
     myfile << finput;
     myfile.close();
+}
+
+void workingdir() {
+    std::cout << "The current working directory is: " << std::endl;
+    std::cout << fs::current_path() << std::endl;
 }

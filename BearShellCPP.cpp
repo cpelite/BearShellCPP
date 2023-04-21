@@ -45,6 +45,9 @@ int main(int, char**)
         else if (input == "filemod") {
             filemod();
         }
+        else if (input == "workdir") {
+            workingdir();
+        }
         else
         {
             std::cout << "Unrecognized command. Please type commlist for a list of commands." << std::endl;

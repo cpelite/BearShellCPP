@@ -18,5 +18,8 @@
     <ClCompile Include="BearShellCPP.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="comms.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -30,9 +31,9 @@ void readfile() {
     std::string mytext;
     std::string filepath;
     std::cout << "Please enter the filename:";
-    std::cin >> filepath; 
+    std::cin >> filepath;
     std::fstream FileToRead(filepath);
-    while (getline (FileToRead, mytext)) {
+    while (getline(FileToRead, mytext)) {
         std::cout << mytext;
         //FileToRead.close();
     }
@@ -44,7 +45,7 @@ void readfile() {
 void lyrica() {
     std::fstream FileToRead("lyrica.txt");
     char ch;
-    while ( FileToRead ) {
+    while (FileToRead) {
         FileToRead.get(ch);
         std::cout << ch;
     }
@@ -75,4 +76,11 @@ void filemod() {
 void workingdir() {
     std::cout << "The current working directory is: " << std::endl;
     std::cout << fs::current_path() << std::endl;
+}
+
+void rmfile() {
+    std::string filename;
+    std::cout << "Please enter the name of the file to be deleted:" << std::endl;
+    std::cin >> filename;
+    fs::remove(filename);
 }

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
-#include <fstream>
-#include "comms.cpp"
+#include "comms.h"
 
 int main(int, char**)
 {
@@ -47,6 +46,9 @@ int main(int, char**)
         }
         else if (input == "workdir") {
             workingdir();
+        }
+        else if (input == "rmfile") {
+            rmfile();
         }
         else
         {

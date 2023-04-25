@@ -18,8 +18,15 @@
     <ClCompile Include="BearShellCPP.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="comms.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="comms.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="settings.conf">
       <Filter>Quelldateien</Filter>
-    </ClCompile>
+    </None>
   </ItemGroup>
 </Project>

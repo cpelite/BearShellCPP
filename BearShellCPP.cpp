@@ -7,11 +7,16 @@ int main(int, char**)
     std::string input;
     std::string username;
 
-    std::cout << "Please enter a username for this session: ";
-    std::cin >> username;
-
     while (true)
     {
+        //Attention: wacky shit starts here.
+        std::fstream FileToRead("settings.conf");
+        std::string username;
+        while (getline(FileToRead, username)) {
+            FileToRead.close();
+        }
+        //wacky shit ends here.
+
         std::cout << "BearShellCPP - v0.0.2" << std::endl;
         std::cout << "[" <<username << "|bscpp]$ " ;
         std::cin >> input;

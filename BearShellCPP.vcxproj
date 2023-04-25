@@ -140,6 +140,9 @@
   <ItemGroup>
     <ClInclude Include="comms.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="settings.conf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

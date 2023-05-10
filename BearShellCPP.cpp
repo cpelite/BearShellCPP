@@ -1,33 +1,25 @@
 #include <iostream>
 #include <string>
-
-void info() {
-    std::cout << "BearShellCPP v0.0.1";
-    std::cout << "Copyright B. Fellner / @CPElite (github.com)";
-}
-
-void echo() {
-    std::string echo;
-    std::cout << "Please enter something to get it echoed back: ";
-    std::cin >> echo;
-    std::cout << echo << "\n";
-}
-
-void commlist() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list.";
-}
-
-void clearscreen() {
-    system("cls");
-}
+#include "comms.h"
+#include "calc.h"
 
 int main(int, char**)
 {
     std::string input;
+    std::string username;
 
     while (true)
     {
-        std::cout << "BearShellCPP - please enter a command to continue." << std::endl;
+        //Attention: wacky shit starts here.
+        std::fstream FileToRead("settings.conf");
+        std::string username;
+        while (getline(FileToRead, username)) {
+            FileToRead.close();
+        }
+        //wacky shit ends here.
+
+        std::cout << "BearShellCPP - v1.0" << std::endl;
+        std::cout << "[" <<username << "|bscpp]$ " ;
         std::cin >> input;
         if (input == "info")
         {
@@ -37,15 +29,39 @@ int main(int, char**)
         {
             echo();
         }
-        else if (input == "commlist") {
+        else if (input == "help") {
             commlist();
         }
         else if (input == "cls") {
             clearscreen();
         }
+        else if (input == "rfile") {
+            readfile();
+        }
+        else if (input == "exit") {
+            break;
+        }
+        else if (input == "lyrica") {
+            lyrica();
+        }
+        else if (input == "mkfile") {
+            mkfile();
+        }
+        else if (input == "filemod") {
+            filemod();
+        }
+        else if (input == "workdir") {
+            workingdir();
+        }
+        else if (input == "rmfile") {
+            rmfile();
+        }
+        else if (input == "calc") {
+            calc();
+        }
         else
         {
-            std::cout << "Unrecognized command. Please type help for a list of commands." << input << std::endl;
+            std::cout << "Unrecognized command. Please type help for a list of commands." << std::endl;
         }
     }
 

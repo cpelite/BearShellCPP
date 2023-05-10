@@ -24,7 +24,7 @@ void commlist() {
 }
 
 void clearscreen() {
-    system("clear");
+    system("cls");
 }
 
 void readfile() {

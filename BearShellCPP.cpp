@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "comms.h"
+#include "calc.h"
 
 int main(int, char**)
 {
@@ -17,7 +18,7 @@ int main(int, char**)
         }
         //wacky shit ends here.
 
-        std::cout << "BearShellCPP - v0.0.2" << std::endl;
+        std::cout << "BearShellCPP - v1.0" << std::endl;
         std::cout << "[" <<username << "|bscpp]$ " ;
         std::cin >> input;
         if (input == "info")
@@ -55,9 +56,12 @@ int main(int, char**)
         else if (input == "rmfile") {
             rmfile();
         }
+        else if (input == "calc") {
+            calc();
+        }
         else
         {
-            std::cout << "Unrecognized command. Please type commlist for a list of commands." << std::endl;
+            std::cout << "Unrecognized command. Please type help for a list of commands." << std::endl;
         }
     }
 

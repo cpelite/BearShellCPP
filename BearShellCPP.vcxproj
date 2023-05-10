@@ -138,6 +138,7 @@
     <ClCompile Include="BearShellCPP.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="calc.h" />
     <ClInclude Include="comms.h" />
   </ItemGroup>
   <ItemGroup>

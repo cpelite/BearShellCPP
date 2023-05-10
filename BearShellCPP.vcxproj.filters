@@ -23,6 +23,9 @@
     <ClInclude Include="comms.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="calc.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="settings.conf">

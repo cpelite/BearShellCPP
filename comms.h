@@ -19,8 +19,8 @@ void echo() {
     std::cout << echo << "\n";
 }
 
-void commlist() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt. \nmkfile - creates a file. \nfilemod - modifies a file. \nworkdir - gets the current working directory." << std::endl;
+void help() {
+    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt. \nmkfile - creates a file. \nfilemod - modifies a file. \nworkdir - gets the current working directory. \ncalc - opens the built-in calculator. \nchangeshellusr - allows to change username, writes change to settings.conf. \nwincalc - starts the windows calculator." << std::endl;
 }
 
 void clearscreen() {
@@ -83,4 +83,18 @@ void rmfile() {
     std::cout << "Please enter the name of the file to be deleted:" << std::endl;
     std::cin >> filename;
     fs::remove(filename);
+}
+
+void changeshellusr() {
+    std::fstream conf_file("settings.conf");
+    std::string finput;
+    std::cout << "Please enter a new username: ";
+    std::cin.ignore();
+    std::getline(std::cin, finput);
+    conf_file << finput;
+    conf_file.close();
+}
+
+void wincalc() {
+    system("calc");
 }

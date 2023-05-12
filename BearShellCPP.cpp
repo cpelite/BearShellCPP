@@ -30,7 +30,7 @@ int main(int, char**)
             echo();
         }
         else if (input == "help") {
-            commlist();
+            help();
         }
         else if (input == "cls") {
             clearscreen();
@@ -58,6 +58,9 @@ int main(int, char**)
         }
         else if (input == "calc") {
             calc();
+        }
+        else if (input == "changeshellusr") {
+            changeshellusr();
         }
         else
         {

@@ -8,8 +8,8 @@
 namespace fs = std::filesystem;
 
 void info() {
-    std::cout << "BearShellCPP v0.0.2 - Ascendere!";
-    std::cout << "Copyright B. Fellner / @CPElite (github.com)";
+    std::cout << "BearShellCPP v1.1 - Ascendere!" << std::endl;
+    std::cout << "Copyright B. Fellner / @CPElite (github.com)" << std::endl;
 }
 
 void echo() {
@@ -20,7 +20,10 @@ void echo() {
 }
 
 void help() {
-    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nlyrica - reads from lyrica.txt. \nmkfile - creates a file. \nfilemod - modifies a file. \nworkdir - gets the current working directory. \ncalc - opens the built-in calculator. \nchangeshellusr - allows to change username, writes change to settings.conf. \nwincalc - starts the windows calculator." << std::endl;
+    std::cout << "The following commands are available: info - displays information about the shell. \necho - echoes user entry back. \ncommlist - shows this list. \nrfile - reads from a user specified file. \nmkfile - creates a file. \nfilemod - modifies a file. \nworkdir - gets the current working directory. \ncalc - opens the built-in calculator. \nchangeshellusr - allows to change username, writes change to settings.conf. \nwc - starts the windows calculator." << std::endl;
+    std::cout << "Press a key to continue." << std::endl;
+    std::cin.get();
+    std::cout << "changelog - displays changelog. \nverhistory - displays version history." << std::endl;
 }
 
 void clearscreen() {
@@ -40,16 +43,6 @@ void readfile() {
     FileToRead.close();
     std::cout << "\n";
 
-}
-
-void lyrica() {
-    std::fstream FileToRead("lyrica.txt");
-    char ch;
-    while (FileToRead) {
-        FileToRead.get(ch);
-        std::cout << ch;
-    }
-    std::cout << std::endl;
 }
 
 void mkfile() {
@@ -86,7 +79,7 @@ void rmfile() {
 }
 
 void changeshellusr() {
-    std::fstream conf_file("settings.conf");
+    std::fstream conf_file("C:\\Users\\bened\\CLionProjects\\BearShellCPP\\src\\misc\\settings.conf");
     std::string finput;
     std::cout << "Please enter a new username: ";
     std::cin.ignore();
@@ -97,4 +90,15 @@ void changeshellusr() {
 
 void wincalc() {
     system("calc");
+}
+
+void changelog() {
+    std::cout << "BearShellCPP - Changelogs" << std::endl;
+    std::cout <<"Changes in Version 1.1: \nFew changes (removed lyrica, hardcoded paths to configuration files.)" << std::endl;
+}
+
+void verhis() {
+    std::cout << "Current Version: 1.1 - 18.06.2023" << std::endl;
+    std::cout << "Previous Versions: " << std::endl;
+    std::cout << "1.0 - 10.05.2023" << std::endl;
 }

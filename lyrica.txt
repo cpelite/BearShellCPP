@@ -1,3 +1,0 @@
-ToDo 
-BearShell verbessern!
-Test 123

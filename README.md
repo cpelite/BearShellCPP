@@ -1,11 +1,13 @@
 
 # BearShell CPP
 
-BearShellCPP is a rudimentary shell, written in C++. At the current moment it's features are VERY limited. This Shell does serve as a project for me to learn C++ - just like nearly everything else in my repositories. ;)
+BearShellCPP is a rudimentary shell, written in C++. At the current moment it's features are VERY limited. This Shell does serve as a project for me to learn C++.
 
 ## Usage
 
-Just compile and execute it. It should work with every system. 
+Compile it - please check if correct paths are entered in comms.h - otherwise functions like changeshellusr won't work properly.
+
+BearShellCPP is designed for usage with Windows.
 
 ## List of commands
 

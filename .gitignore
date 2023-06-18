@@ -362,6 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 .vscode
-test.txt
+src/misc/test.txt
 valerica.txt
-/settings.conf
+/src/misc/settings.conf
